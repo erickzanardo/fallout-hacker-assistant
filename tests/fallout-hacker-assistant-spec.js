@@ -61,4 +61,14 @@ describe("FalloutHackerAssistant", function() {
       });
     });
   });
+
+  describe("#reset", function() {
+    var fha = new FHA();
+    fha.addWrongPassword("fire", 0);
+
+    it("clears the FHA", function() {
+      fha.reset();
+      expect(fha.errors.length).to.equals(0);
+    });
+  });
 });

@@ -3,7 +3,7 @@
 var WrongPassword = require("./wrong-password");
 
 function FalloutHackerAssistant() {
-  this.errors = [];
+  this.reset();
 }
 
 var p = FalloutHackerAssistant.prototype;
@@ -39,6 +39,10 @@ p.isAProbablyMatch = function(pass) {
     if (!this._compareError(this.errors[i], pass)) return false;
   }
   return true;
+}
+
+p.reset = function() {
+  this.errors = [];
 }
 
 module.exports = FalloutHackerAssistant;
