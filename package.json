@@ -1,0 +1,19 @@
+{
+  "name": "fallout-hacker-assistant",
+  "version": "1.0.0",
+  "description": "Simple app to assist players hack Fallout 4 terminals",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --recursive tests/",
+    "build": "./node_modules/browserify/bin/cmd.js index.js -o dist/index.js",
+    "watch": "./node_modules/watchify/bin/cmd.js index.js -o dist/index.js"
+  },
+  "author": "Erick Zanardo",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "watchify": "^3.6.1",
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  }
+}
