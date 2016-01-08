@@ -12,15 +12,21 @@
       <input type="button" value="OK" ng-click="logs = []">
     </ul>
     <h3>Know wrong passwords</h3>
-    <table>
+    <table class="know-errors">
+      <tr>
+        <th>Password</th>
+        <th>Likeness</th>
+      </tr>
       <tr ng-repeat="error in fha.errors">
         <td>{{error.password}}</td>
         <td>{{error.likeness}}</td>
       </tr>
     </table>
 
-    <input type="text" class="password-input" ng-model="password" ng-change="verify()" ng-class="{invalid: unlikely}">
-    <input type="button" ng-click="addError()" value="Mark as wrong">
+    <div class="bottom-inputs">
+      <input type="text" class="password-input" ng-model="password" ng-change="verify()" ng-class="{invalid: unlikely}">
+      <input type="button" ng-click="addError()" value="Mark as wrong">
+    </div>
 
     <div class="likeness-input" ng-show="likenessInput">
       <input type="number" ng-model="likeness">

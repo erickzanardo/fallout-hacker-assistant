@@ -1,3 +1,47 @@
+@font-face {
+  font-family: "Terminal";
+  src: url("Share-TechMono.otf");
+}
+
+* {
+  text-align: center;
+  font-family: "Terminal";
+  background-color: #000;
+  color: #28FA02;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 8vw;
+}
+
+.know-errors {
+  font-size: 4vw;
+}
+
+input {
+  border: 1vw solid #28FA02;
+  font-size: 3vw;
+}
+
+.bottom-inputs {
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  height: 15vw; 
+}
+
+.bottom-inputs input[type=text] {
+  width: 70%;
+  height: 80%;
+}
+
+.bottom-inputs input[type=button] {
+  width: 25%;
+  height: 80%;
+}
+
 .password-input {
   color: darkgreen;
 }
