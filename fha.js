@@ -22,6 +22,8 @@ p._compareError = function(error, pass) {
       currentLikeness = 0,
       counter = 0;
 
+  if (wrongpass.length != pass.length) return false;
+
   while (counter < pass.length) {
     var wLetter = wrongpass.substring(counter, counter + 1);
     var pLetter = pass.substring(counter, counter + 1);

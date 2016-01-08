@@ -1,0 +1,30 @@
+<html ng-app="fhaApp">
+  <head>
+    <title>Fallout hacker assistant</title>
+    <link rel="stylesheet" href="assets/index.css" />
+    <script type="text/javascript" src="index.js"></script>
+  </head>
+  <body ng-controller="FhaController">
+    <ul class="errors" ng-show="logs.length > 0">
+      <li ng-repeat="log in logs">
+        {{log}}
+      </li>
+      <input type="button" value="OK" ng-click="logs = []">
+    </ul>
+    <h3>Know wrong passwords</h3>
+    <table>
+      <tr ng-repeat="error in fha.errors">
+        <td>{{error.password}}</td>
+        <td>{{error.likeness}}</td>
+      </tr>
+    </table>
+
+    <input type="text" class="password-input" ng-model="password" ng-change="verify()" ng-class="{invalid: unlikely}">
+    <input type="button" ng-click="addError()" value="Mark as wrong">
+
+    <div class="likeness-input" ng-show="likenessInput">
+      <input type="number" ng-model="likeness">
+      <input type="button" ng-click="confirmInsertion()" value="OK">
+    </div>
+  </body>
+</html>

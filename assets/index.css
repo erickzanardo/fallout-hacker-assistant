@@ -1,0 +1,7 @@
+.password-input {
+  color: darkgreen;
+}
+
+.password-input.invalid {
+  color: red;
+}

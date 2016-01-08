@@ -60,6 +60,15 @@ describe("FalloutHackerAssistant", function() {
         expect(fha.isAProbablyMatch("gate")).to.is.false;
       });
     });
+
+    context("when the password have different lengths", function() {
+      var fha = new FHA();
+      fha.addWrongPassword("fire", 1);
+      
+      it("returns false", function() {
+        expect(fha.isAProbablyMatch("fat")).to.is.false;
+      });
+    });
   });
 
   describe("#reset", function() {
