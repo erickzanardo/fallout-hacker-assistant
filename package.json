@@ -5,7 +5,7 @@
   "main": "fha.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --recursive tests/",
-    "build": "./node_modules/browserify/bin/cmd.js fha.js -o dist/fha.js && ./node_modules/browserify/bin/cmd.js index.js -o dist/index.js && cp -r index.html assets dist/"
+    "build": "mkdir -p dist && ./node_modules/browserify/bin/cmd.js fha.js -o dist/fha.js && ./node_modules/browserify/bin/cmd.js index.js -o dist/index.js && cp -r index.html assets dist/"
   },
   "author": "Erick Zanardo",
   "license": "MIT",
