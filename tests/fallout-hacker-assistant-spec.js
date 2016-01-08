@@ -1,7 +1,7 @@
 var chai = require("chai");
 var expect = chai.expect;
 
-var FHA = require("../index");
+var FHA = require("../fha");
 
 describe("FalloutHackerAssistant", function() {
   describe("#addWrongPassword", function() {
