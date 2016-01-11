@@ -33,6 +33,7 @@
           $scope.likeness = null;
           $scope.likenessInput = false;
         } catch (e) {
+          $scope.likenessInput = false;
           $scope.logs.push(e);
         }
       }

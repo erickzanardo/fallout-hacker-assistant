@@ -17,6 +17,7 @@ h3 {
 
 .know-errors {
   font-size: 4vw;
+  width: 100%;
 }
 
 input {
@@ -49,3 +50,13 @@ input {
 .password-input.invalid {
   color: red;
 }
+
+.likeness-input, .errors {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding-top: 40vh;
+}
+
