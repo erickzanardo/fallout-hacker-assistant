@@ -69,6 +69,15 @@ describe("FalloutHackerAssistant", function() {
         expect(fha.isAProbablyMatch("fat")).to.is.false;
       });
     });
+
+    context("when the probably match has different case", function() {
+      var fha = new FHA();
+      fha.addWrongPassword("fire", 1);
+      
+      it.only("ignores the case", function() {
+        expect(fha.isAProbablyMatch("Fatt")).to.is.true;
+      });
+    });
   });
 
   describe("#reset", function() {

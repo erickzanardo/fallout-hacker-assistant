@@ -37,6 +37,7 @@ p._compareError = function(error, pass) {
 };
 
 p.isAProbablyMatch = function(pass) {
+  pass = pass.toLowerCase();
   for (var i = 0; i < this.errors.length; i++) {
     if (!this._compareError(this.errors[i], pass)) return false;
   }
