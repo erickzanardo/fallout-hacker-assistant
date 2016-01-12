@@ -74,7 +74,7 @@ describe("FalloutHackerAssistant", function() {
       var fha = new FHA();
       fha.addWrongPassword("fire", 1);
       
-      it.only("ignores the case", function() {
+      it("ignores the case", function() {
         expect(fha.isAProbablyMatch("Fatt")).to.is.true;
       });
     });
