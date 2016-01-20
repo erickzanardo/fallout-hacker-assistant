@@ -6,6 +6,9 @@
     <script type="text/javascript" src="index.js"></script>
   </head>
   <body ng-controller="FhaController">
+    <span class="reset" ng-click="reset()">
+      X
+    </span>
     <ul class="errors" ng-show="logs.length > 0">
       <li ng-repeat="log in logs">
         {{log}}
