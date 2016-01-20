@@ -20,6 +20,15 @@ h3 {
   width: 100%;
 }
 
+.reset {
+  cursor: pointer;
+  border: 1vw solid #28FA02;
+  font-size: 3vw;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+}
+
 input {
   border: 1vw solid #28FA02;
   font-size: 3vw;

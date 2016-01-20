@@ -23,6 +23,10 @@
       }
     };
 
+    $scope.reset = function() {
+      $scope.fha.reset();
+    };
+
     $scope.confirmInsertion = function() {
       if (isNaN($scope.likeness)) {
         // play some noise
